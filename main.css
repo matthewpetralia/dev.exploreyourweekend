@@ -12,6 +12,7 @@ body {
 body {
     margin: 0;
     overflow: hidden;
+    height: 100%
 }
 
 :root {
@@ -19,8 +20,8 @@ body {
     --Green-Solid: rgba(53, 105, 90, 1);
     --Sand-Op: rgba(230, 224, 218, .8);
     --Sand-Solid: rgba(230, 224, 218, 1);
-    --MainHeight: 92vh;
-    --StatusHeight: 8vh;
+    --MainHeight: 92%;
+    --StatusHeight: 8%;
 }
 
 .Main img,
@@ -223,12 +224,12 @@ h4:empty::after {
 }
 
 .ind .D {
-    height: 80vh;
+    height: 80;
 
 }
 
 .D {
-    height: 92vh;
+/*    height: 92%;*/
     width: 100vw;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
