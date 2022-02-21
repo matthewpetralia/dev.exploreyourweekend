@@ -22,7 +22,7 @@ body {
     --Green-Solid: rgba(53, 105, 90, 1);
     --Sand-Op: rgba(230, 224, 218, .8);
     --Sand-Solid: rgba(230, 224, 218, 1);
-    --MainHeight: 92%;
+    --MainHeight: 100%;
     --StatusHeight: 8vh;
 }
 
@@ -194,7 +194,8 @@ h4:empty::after {
     top: 0;
     width: 100vw;
     height: var(--StatusHeight);
-    display: flex;
+    display: none;
+/*    display: flex;*/
     align-items: center;
     padding: 0.125% 2.5%;
     box-sizing: border-box;
@@ -223,7 +224,7 @@ h4:empty::after {
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    height: 92vh;
+/*    height: 92vh;*/
 }
 
 .ind .D {
@@ -238,6 +239,31 @@ h4:empty::after {
     scroll-snap-stop: normal;
     position: relative;
 
+}
+
+.Main .DH .tags{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
+    
+}
+
+.tags a{
+    background-color: var(--Sand-Solid);
+    padding: 1vh 3vw;
+    margin-right: 1vw;
+    margin-bottom: .5vh;
+    border-radius: 3vh;
+    font-size: 2vh;
+
+}
+
+.tags a::after {
+    content: "\00a0\00a0\00a0\276F";
+}
+
+.tags a:hover {
+    background-color: var(--Green-Solid);
 }
 
 .bg{
@@ -258,7 +284,7 @@ h4:empty::after {
 }
 
 .DH > .InfoPanel {
-    height: 50%;
+/*    height: 50%;*/
     font-size: 4vh;
     background-color: var(--Green-Op);
 }
@@ -283,7 +309,7 @@ h4:empty::after {
 .tags {
     display: flex;
     flex-wrap: wrap;
-    height: auto;
+/*    height: auto;*/
 }
 
 .tags div {
@@ -297,7 +323,9 @@ h4:empty::after {
 
 .ind .tags {
     margin-top: 2vh;
-    width: 75%
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tags div:empty {
