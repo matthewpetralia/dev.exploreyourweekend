@@ -19,9 +19,9 @@ body {
 
 :root {
     --Green-Op: rgba(53, 105, 90, .97);
-    --Green-Solid: rgba(53, 105, 90, 1);
+    --Green: rgba(53, 105, 90, 1);
     --Sand-Op: rgba(230, 224, 218, .97);
-    --Sand-Solid: rgba(230, 224, 218, 1);
+    --Sand: rgba(230, 224, 218, 1);
     --MainHeight: 100%;
     --StatusHeight: 8vh;
 }
@@ -44,9 +44,14 @@ body {
     max-width: 100%;
 }
 
-#Dr1 img {
+.Springbrook #A5 img {
     object-position: 10%;
 }
+
+.Springbrook #A6 img {
+    object-position: 20%;
+}
+
 
 .fwd::after {
     content: "\276F";
@@ -76,7 +81,11 @@ body {
     background-color: transparent;
     color: rgba(255, 255, 255, .5);
     font-size: 2.5vh;
-    padding: 42.5vh 5vw;
+    /*    padding: 42.5vh 5vw;*/
+    padding-left: 5vw;
+    display: inline-flex;
+    /*    flex-direction: column;*/
+    place-items: center;
     box-sizing: border-box;
 }
 
@@ -88,8 +97,8 @@ body {
 }
 
 .fwd {
-    right: 0;
-    text-align: right;
+    right: 0px;
+    padding-left: 43vw;
 }
 
 .bwd {
@@ -100,11 +109,13 @@ body {
 .ind .fwd {
     height: 100%;
     width: 100%;
-    padding: 37vh 10vw;
+    padding-left: 85vw;;
     font-size: 5vh;
     color: white;
-    
+    font-family: 'Lato Light', sans-serif;
+
 }
+
 .fwd:hover .bwd:hover {
     font-weight: bolder;
     color: white;
@@ -169,7 +180,7 @@ h4:empty::after {
     padding: 0.125% 2.5%;
     box-sizing: border-box;
     font-size: 2vh;
-    background-color: var(--Green-Solid);
+    background-color: var(--Green);
     overflow: hidden;
 }
 
@@ -196,7 +207,8 @@ h4:empty::after {
     /*    height: 92vh;*/
 }
 
-.Landing > div, .Main > div {
+.Landing > div,
+.Main > div {
     height: 100%;
     width: 100vw;
     scroll-snap-align: start;
@@ -209,8 +221,46 @@ h4:empty::after {
     height: 80vh;
 }
 
-#Hi .tags {
+.Nav {
+    height: 7%;
+    position: absolute;
+    bottom: 2.5vh;
+    width: 100vw;
+    background-color: transparent;
     display: flex;
+    box-sizing: border-box;
+    padding: .3vh 2.5%;
+}
+
+.Nav a {
+    display: flex;
+    background-color: var(--Green);
+    align-items: center;
+    width: 88.5%;
+    place-content: center;
+    border-radius: 3vh;
+    font-size: 3vh;
+    margin: .4vh;
+    box-sizing: border-box;
+}
+
+.Nav a:hover {
+    background-color: var(--Sand);
+}
+
+.Nav a:first-child {
+    width: 11.75%;
+    border-radius: 100px;
+}
+
+.Nav img {
+    height: 3vh;
+    padding-bottom: 0.5vh;
+}
+
+#A0 .tags {
+    display: flex;
+    /*    place-content: center;*/
     flex-direction: column;
     margin-top: 3vh;
 
@@ -219,15 +269,15 @@ h4:empty::after {
 .Main .tags div:nth-child(1),
 .Main .tags div:nth-child(2),
 .Main .tags div:nth-child(3) {
-    color: var(--Green-Solid);
+    color: var(--Green);
     background-color: transparent;
-    border-color: var(--Green-Solid);
+    border-color: var(--Green);
     border-style: solid;
     border-width: .25vh;
 }
 
 .tags a {
-    background-color: var(--Green-Solid);
+    background-color: var(--Green);
     padding: 1vh 3vw;
     margin-right: 1vw;
     margin-bottom: .5vh;
@@ -241,7 +291,24 @@ h4:empty::after {
 }
 
 .tags a:hover {
-    background-color: var(--Sand-Solid);
+    background-color: var(--Sand);
+}
+
+#D-Acknowledgements.tags a {
+    display: flex;
+}
+
+#D-Acknowledgements .tags {
+    display: flex;
+    flex-direction: column;
+}
+
+#D-Acknowledgements .tags a:nth-child(1):hover::after {
+    content: "Instagram";
+}
+
+#D-Acknowledgements .tags a:nth-child(1)::after {
+    content: "John Smith";
 }
 
 .InfoPanel {
@@ -253,14 +320,16 @@ h4:empty::after {
     height: auto;
     width: 100vw;
     border-radius: 20px 20px 0 0;
-    padding-bottom: 3vh;
+    padding-bottom: 7vh;
     overflow: hidden;
 }
 
-#Hi .InfoPanel {
+#A0 .InfoPanel {
     /*    height: 50%;*/
-/*    font-size: 4vh;*/
-    background-color: var(--Sand-Op);
+    /*    font-size: 4vh;*/
+    /*    background-color: var(--Sand-Op);*/
+    background: linear-gradient(180deg, rgba(0, 0, 0, .3) 0%, rgba(0, 212, 255, 0) 100%);
+
 }
 
 .ind .InfoPanel {
@@ -271,7 +340,7 @@ h4:empty::after {
 }
 
 #D-Acknowledgements > .InfoPanel {
-    background-color: var(--Green-Solid);
+    background-color: var(--Green);
 }
 
 .ind h3 {
@@ -293,7 +362,7 @@ h4:empty::after {
     margin-bottom: .5vh;
     border-radius: 3vh;
     padding: .2vh 2.5vw;
-    background-color: var(--Green-Solid);
+    background-color: var(--Green);
     font-size: 2vh;
     border-style: solid;
     border-color: transparent;
