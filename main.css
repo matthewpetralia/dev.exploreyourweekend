@@ -222,26 +222,25 @@ h4:empty::after {
 }
 
 .Nav {
-    height: 7%;
+    height: 60px;
     position: absolute;
     bottom: 2.5vh;
     width: 100vw;
     background-color: transparent;
     display: flex;
-    box-sizing: border-box;
+/*    box-sizing: border-box;*/
     padding: .3vh 2.5%;
 }
 
 .Nav a {
     display: flex;
+    box-sizing: border-box;
     background-color: var(--Green);
     align-items: center;
-    width: 88.5%;
+    width: calc(90vw - 60px);
     place-content: center;
     border-radius: 3vh;
     font-size: 3vh;
-    margin: .4vh;
-    box-sizing: border-box;
 }
 
 .Nav a:hover {
@@ -249,8 +248,9 @@ h4:empty::after {
 }
 
 .Nav a:first-child {
-    width: 11.75%;
+    width: 60px;
     border-radius: 100px;
+    margin-right: .6vh;
 }
 
 .Nav img {
@@ -320,7 +320,7 @@ h4:empty::after {
     height: auto;
     width: 100vw;
     border-radius: 20px 20px 0 0;
-    padding-bottom: 7vh;
+    padding-bottom: 10vh;
     overflow: hidden;
 }
 
