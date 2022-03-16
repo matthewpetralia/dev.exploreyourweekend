@@ -254,15 +254,11 @@ h4:empty::after {
     text-align: center;
 }
 
-<<<<<<< HEAD
-.Nav .InfoPanel {
-=======
 .Nav .InfoPanel .tags a:first-child{
     text-align: center;
 }
 
 .Nav .InfoPanel{
->>>>>>> 9412a9dfc80f28f58c2e47400fc40fbc5c0e8838
     bottom: 100%;
     width: 100%;
     height: auto;
