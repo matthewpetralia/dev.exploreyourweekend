@@ -249,6 +249,10 @@ h4:empty::after {
     
 }
 
+.Nav .InfoPanel .tags a:first-child{
+    text-align: center;
+}
+
 .Nav .InfoPanel{
     bottom: 100%;
 }
