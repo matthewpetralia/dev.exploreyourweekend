@@ -109,7 +109,8 @@ body {
 .ind .fwd {
     height: 100%;
     width: 100%;
-    padding-left: 85vw;;
+    padding-left: 85vw;
+    ;
     font-size: 5vh;
     color: white;
     font-family: 'Lato Light', sans-serif;
@@ -224,12 +225,12 @@ h4:empty::after {
 .Nav {
     height: 6%;
     position: fixed;
-/*    left: 0;*/
+    /*    left: 0;*/
     bottom: 0;
     width: 100vw;
     background-color: transparent;
     display: flex;
-/*    padding: .3vh 2.5%;*/
+    /*    padding: .3vh 2.5%;*/
 }
 
 .Nav > a {
@@ -237,24 +238,26 @@ h4:empty::after {
     box-sizing: border-box;
     background-color: var(--Green);
     align-items: center;
-/*    width: calc(100vw - 7vh - 0.6vh - 5%);*/
+    /*    width: calc(100vw - 7vh - 0.6vh - 5%);*/
     width: 100%;
     place-content: center;
     border-radius: 3vh 3vh 0 0;
     font-size: 3vh;
 }
 
-.Nav .InfoPanel .tags{
+.Nav .InfoPanel .tags {
     display: grid;
-    
+
 }
 
-.Nav .InfoPanel .tags a:first-child{
+.Nav .InfoPanel .tags a:first-child {
     text-align: center;
 }
 
-.Nav .InfoPanel{
+.Nav .InfoPanel {
     bottom: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .Nav .material-icons-outlined {
@@ -265,7 +268,7 @@ h4:empty::after {
     border-radius: 0px;
 }
 
-#myLinks{
+#myLinks {
     display: none;
 }
 
@@ -293,7 +296,7 @@ h4:empty::after {
     content: "\00a0\00a0\00a0\276F";
 }
 
-.tags a:first-child::after{
+.tags a:first-child::after {
     content: " ";
 }
 
@@ -331,7 +334,7 @@ Acknowledgements .tags a:nth-child(1)::after {
     overflow: hidden;
 }
 
-.Nav .InfoPanel{
+.Nav .InfoPanel {
     padding-bottom: 3vh;
     left: 0;
 }
@@ -419,22 +422,33 @@ Acknowledgements > .InfoPanel {
     }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (orientation: landscape) {
     .Status {
         font-size: calc(4vw);
     }
 }
 
-@media only screen and (max-height: 430px) {
+@media only screen and (max-height: 750px) {
     h4 {
         font-size: 3vh;
     }
 
     h3 {
-        font-size: 6vh;
+        font-size: 5vh;
     }
 
-    .Status {
-        font-size: .8ex
+    .Nav a {
+        font-size: 3vh;
     }
+
+    .Nav .material-icons-outlined {
+        font-size: 5vh;
+    }
+    .tags div{
+        font-size: 3vh;
+    }
+    .InfoPanel{
+        font-size: 3vh;
+    }
+
 }
