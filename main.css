@@ -201,6 +201,7 @@ h4:empty::after {
 }
 
 .Landing {
+    height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -222,13 +223,14 @@ h4:empty::after {
 }
 
 .Nav {
-    height: 7vh;
-    position: sticky;
-    bottom: 2.5vh;
+    height: 6%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100vw;
     background-color: transparent;
     display: flex;
-    padding: .3vh 2.5%;
+/*    padding: .3vh 2.5%;*/
 }
 
 .Nav a {
@@ -236,33 +238,27 @@ h4:empty::after {
     box-sizing: border-box;
     background-color: var(--Green);
     align-items: center;
-    width: calc(100vw - 7vh - 0.6vh - 5%);
+/*    width: calc(100vw - 7vh - 0.6vh - 5%);*/
+    width: 100%;
     place-content: center;
-    border-radius: 3vh;
+    border-radius: 3vh 3vh 0 0;
     font-size: 3vh;
 }
 
-.Nav a:hover {
-    background-color: var(--Sand);
+.Nav .InfoPanel{
+    bottom: 100%;
 }
 
-.Nav a:first-child {
-    width: 7vh;
-    border-radius: 100px;
-    margin-right: .6vh;
+.Nav .material-icons-outlined {
+    font-size: 4vh;
 }
 
-.Nav img {
-    height: 3vh;
-    padding-bottom: 0.5vh;
+.Nav > a:hover {
+    border-radius: 0px;
 }
 
-#A0 .tags {
-    display: flex;
-    /*    place-content: center;*/
-    flex-direction: column;
-    margin-top: 3vh;
-
+#myLinks{
+    display: none;
 }
 
 .Main .tags div:nth-child(1),
@@ -289,24 +285,28 @@ h4:empty::after {
     content: "\00a0\00a0\00a0\276F";
 }
 
+.tags a:first-child::after{
+    content: " ";
+}
+
 .tags a:hover {
     background-color: var(--Sand);
 }
 
-#D-Acknowledgements.tags a {
+Acknowledgements.tags a {
     display: flex;
 }
 
-#D-Acknowledgements .tags {
+Acknowledgements .tags {
     display: flex;
     flex-direction: column;
 }
 
-#D-Acknowledgements .tags a:nth-child(1):hover::after {
+Acknowledgements .tags a:nth-child(1):hover::after {
     content: "Instagram";
 }
 
-#D-Acknowledgements .tags a:nth-child(1)::after {
+Acknowledgements .tags a:nth-child(1)::after {
     content: "John Smith";
 }
 
@@ -319,8 +319,13 @@ h4:empty::after {
     height: auto;
     width: 100vw;
     border-radius: 20px 20px 0 0;
-    padding-bottom: 10vh;
+    padding-bottom: 6vh;
     overflow: hidden;
+}
+
+.Nav .InfoPanel{
+    padding-bottom: 3vh;
+    left: 0;
 }
 
 #A0 .InfoPanel {
@@ -338,7 +343,7 @@ h4:empty::after {
     border-radius: 0;
 }
 
-#D-Acknowledgements > .InfoPanel {
+Acknowledgements > .InfoPanel {
     background-color: var(--Green);
 }
 
