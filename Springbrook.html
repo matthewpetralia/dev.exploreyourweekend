@@ -8,15 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Hubballi&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="code.js">
     <link rel="stylesheet" href="content.css">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body class="Springbrook">
-    <div class="Status">
-        <h1><a href="index.html"><img src="Icons/Home.svg"></a> Explore </h1>
-    </div>
-
 
     <div class="Main">
         <div id="A1">
@@ -166,7 +163,7 @@
     </div>
     <div class="Nav">
         <a href="javascript:void(0);" onclick="myFunction()">
-            <span class="material-icons-outlined">expand_less</span> 
+            <span class="material-icons-outlined" id="expand">expand_less</span>
         </a>
         <div id="myLinks">
             <div class="InfoPanel">
@@ -194,8 +191,12 @@
             var x = document.getElementById("myLinks");
             if (x.style.display === "block") {
                 x.style.display = "none";
+                document.querySelector(".Nav > a").style.borderRadius = "3vh 3vh 0 0";
+                document.getElementById("expand").innerHTML = "expand_less";
             } else {
                 x.style.display = "block";
+                document.querySelector(".Nav > a").style.borderRadius = "0px";
+                document.getElementById("expand").innerHTML = "expand_more";
             }
         }
     </script>

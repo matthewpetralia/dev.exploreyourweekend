@@ -1,5 +1,6 @@
 * {
     scroll-behavior: smooth;
+    webkit-tap-highlight-color: transparent;
 }
 
 a,
@@ -23,7 +24,6 @@ body {
     --Sand-Op: rgba(230, 224, 218, .97);
     --Sand: rgba(230, 224, 218, 1);
     --MainHeight: 100%;
-    --StatusHeight: 8vh;
 }
 
 .Main img,
@@ -164,27 +164,6 @@ h4:empty::after {
     content: " NATIONAL PARK";
 }
 
-.Status img {
-    height: 0.8em;
-    width: auto;
-    padding-right: 1vh;
-}
-
-.Status {
-    position: relative;
-    top: 0;
-    width: 100vw;
-    height: var(--StatusHeight);
-    display: none;
-    /*    display: flex;*/
-    align-items: center;
-    padding: 0.125% 2.5%;
-    box-sizing: border-box;
-    font-size: 2vh;
-    background-color: var(--Green);
-    overflow: hidden;
-}
-
 .Landing,
 .Main {
     position: relative;
@@ -238,7 +217,6 @@ h4:empty::after {
     box-sizing: border-box;
     background-color: var(--Green);
     align-items: center;
-    /*    width: calc(100vw - 7vh - 0.6vh - 5%);*/
     width: 100%;
     place-content: center;
     border-radius: 3vh 3vh 0 0;
@@ -254,10 +232,6 @@ h4:empty::after {
     text-align: center;
 }
 
-.Nav .InfoPanel .tags a:first-child{
-    text-align: center;
-}
-
 .Nav .InfoPanel{
     bottom: 100%;
     width: 100%;
@@ -267,10 +241,12 @@ h4:empty::after {
 .Nav .material-icons-outlined {
     font-size: 4vh;
 }
+/*
 
 .Nav > a:hover {
     border-radius: 0px;
 }
+*/
 
 #myLinks {
     display: none;
@@ -380,18 +356,21 @@ Acknowledgements > .InfoPanel {
     margin-right: 1vw;
     margin-bottom: .5vh;
     border-radius: 3vh;
-    padding: .2vh 2.5vw;
+    padding: .4vh 2.5vw;
+    width: auto;
     background-color: var(--Green);
     font-size: 2vh;
-    border-style: solid;
+/*    border-style: solid;*/
     border-color: transparent;
 }
 
 .ind .tags {
     margin-top: 2vh;
-    width: 75%;
+    max-width: 75%;
+/*
     display: flex;
     flex-wrap: wrap;
+*/
 }
 
 .tags div:empty {
