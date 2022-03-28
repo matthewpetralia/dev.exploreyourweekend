@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Hubballi&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
-    <link href="code.js">
+    <link type="text/javascript" href="code.js">
     <link rel="stylesheet" href="content.css">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -29,7 +29,7 @@
                     <div>Waterfall</div>
                     <div>Rainforest</div>
                 </div>
-                <p>Purling Brook Falls is a stunning walk winding down the cliffside into a stunning waterfall.</p>
+                <p>Purling Brook Falls is a stunning walk winding down the cliffside into an equally stunning waterfall.</p>
             </div>
             <a class="fwd" href="#A2"></a>
         </div>
@@ -170,15 +170,7 @@
                 <h4></h4>
                 <h3>Explore</h3>
                 <div class="tags">
-                    <a href="index.html"><span class="material-icons-outlined">home</span></a>
-                    <a href="#A1" onclick="myFunction()">Purling Brook Falls Hike</a>
-                    <a href="#A2" onclick="myFunction()">Warrie Circuit Hike</a>
-                    <a href="#A3" onclick="myFunction()">Best of All Lookout</a>
-                    <a href="#A4" onclick="myFunction()">Wunburra Lookout</a>
-                    <a href="#A5" onclick="myFunction()">Lyrebird Ridge Rd Drive</a>
-                    <a href="#A6" onclick="myFunction()">Springbrook via Advancetown Drive</a>
-                    <a href="#A7" onclick="myFunction()">Springbrook via Mudgeeraba Drive</a>
-                    <a href="#A8" onclick="myFunction()">Springbrook via Murwillumbah Drive</a>
+                   
                 </div>
             </div>
         </div>
@@ -199,6 +191,15 @@
                 document.getElementById("expand").innerHTML = "expand_more";
             }
         }
+
+        let text = "";
+        let divNum = document.querySelector('.Main').children.length;
+
+        for (let i = 1; i < divNum + 1; i++) {
+            text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#A" + i + "' onclick='myFunction()'>" + document.querySelector('#A' + i + ' h3').innerHTML + "</a>";
+        }
+
+        document.querySelector(".Nav .tags").innerHTML = '<a href="index.html"><span class="material-icons-outlined">home</span></a>' + text;
     </script>
 
 </body></html> 

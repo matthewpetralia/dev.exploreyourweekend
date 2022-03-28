@@ -6,35 +6,15 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Hubballi&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link type="text/javascript" href="code.js">
     <link rel="stylesheet" href="content.css">
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body class="Springbrook">
-    <div class="Status">
-        <h1><a href="index.html"><img src="Icons/Home.svg"></a> Explore </h1>
-    </div>
-
-
+<body class="Burl">
     <div class="Main">
-
-
-        <div id="A0">
-            <img src="Images/Sp_Hi.webp">
-            <a class="fwd" href="#A1"></a>
-            <div class="InfoPanel">
-                <h4></h4>
-                <h3>Explore</h3>
-                <div class="tags">
-                    <a href="#A1">Oceanview Walk</a>
-                    <a href="#A2">Rainforest Circuit</a>
-                    <a href="#A3">Tumgun Lookout</a>
-                    <a href="#A4">Jebbribillum Lookout</a>
-                </div>
-            </div>
-        </div>
-
         <div id="A1">
             <img src="Images/Burl_Lo_Jebbribillum.webp">
 
@@ -48,7 +28,7 @@
                     <div>Lookouts</div>
                     <div>Coastal</div>
                 </div>
-                <p>Oceanview Walk links Burleigh Heads and Tallebudgera Creek whilst offering stunning coastal scenery.</p>
+                <p>Oceanview Walk links Burleigh Head and Tallebudgera Creek whilst offering stunning coastal scenery.</p>
             </div>
             <a class="bwd" href="#A0"></a>
             <a class="fwd" href="#A2"></a>
@@ -67,7 +47,7 @@
                     <div>Coastal</div>
                     <div>Rainforest</div>
                 </div>
-                <p>Rainforest Circuit winds through the coastal rainforest of Burleigh Heads, and links up with Oceanview Walk.</p>
+                <p>Rainforest Circuit winds through the coastal rainforest of Burleigh Head, and links up with Oceanview Walk.</p>
             </div>
             <a class="bwd" href="#A1"></a>
             <a class="fwd" href="#A3"></a>
@@ -111,8 +91,42 @@
 
     </div>
     <div class="Nav">
-        <a href="index.html"><img src="Icons/Home.svg"></a>
-        <a href="#A0">Start</a>
-    </div>
+        <a href="javascript:void(0);" onclick="myFunction()">
+            <span class="material-icons-outlined" id="expand">expand_less</span>
+        </a>
+        <div id="myLinks">
+            <div class="InfoPanel">
+                <h4></h4>
+                <h3>Explore</h3>
+                <div class="tags">
+                  
+                </div>
+            </div>
+        </div>
 
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                document.querySelector(".Nav > a").style.borderRadius = "3vh 3vh 0 0";
+                document.getElementById("expand").innerHTML = "expand_less";
+            } else {
+                x.style.display = "block";
+                document.querySelector(".Nav > a").style.borderRadius = "0px";
+                document.getElementById("expand").innerHTML = "expand_more";
+            }
+        }
+
+        let text = "";
+        let divNum = document.querySelector('.Main').children.length;
+
+        for (let i = 1; i < divNum + 1; i++) {
+            text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#A" + i + "' onclick='myFunction()'>" + document.querySelector('#A' + i + ' h3').innerHTML + "</a>";
+        }
+
+        document.querySelector(".Nav .tags").innerHTML = '<a href="index.html"><span class="material-icons-outlined">home</span></a>' + text;
+    </script>
 </body></html>

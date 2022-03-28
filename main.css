@@ -18,6 +18,25 @@ body {
 
 }
 
+.Springbrook h4::before{
+    content: " Springbrook";
+}
+
+.Burl h4::before{
+    content: " Burleigh Head";
+}
+
+.BrokenH h4::before{
+    content: " Broken Head";
+}
+.BrokenH h4:empty::after {
+    content: " NATURE RESERVE";
+}
+
+h4:empty::after {
+    content: " NATIONAL PARK";
+}
+
 :root {
     --Green-Op: rgba(53, 105, 90, .97);
     --Green: rgba(53, 105, 90, 1);
@@ -150,19 +169,7 @@ h3 {
     font-size: 3vh;
 }
 
-.Springbrook h4::before,
-.Springbrook h1::after {
-    content: " Springbrook";
-}
 
-.Burl h4::before,
-.Burl h1::after {
-    content: " Burleigh Heads";
-}
-
-h4:empty::after {
-    content: " NATIONAL PARK";
-}
 
 .Landing,
 .Main {
@@ -356,12 +363,12 @@ Acknowledgements > .InfoPanel {
     margin-right: 1vw;
     margin-bottom: .5vh;
     border-radius: 3vh;
-    padding: .4vh 2.5vw;
-    width: auto;
+    padding: .4vh 3vw;
     background-color: var(--Green);
     font-size: 2vh;
-/*    border-style: solid;*/
+    border-style: solid;
     border-color: transparent;
+/*    align-self: center;*/
 }
 
 .ind .tags {
