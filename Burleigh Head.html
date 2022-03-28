@@ -17,6 +17,8 @@
 <body>
 
     <div class="Main">
+
+
     </div>
     <div class="Nav">
         <a href="javascript:void(0);" onclick="myFunction()">
@@ -37,7 +39,11 @@
 
     <script>
         const B1 = [
-            "Bu_Hi_Oc;A Walk;1.2km one-way,30mins,Lookouts,Coastal;A Walk links two places whilst offering stunning coastal scenery.;A Fantastic National Park"
+            'Bu_Hi_Oc;Oceanview Walk;1.2km one-way,30mins,Lookouts,Coastal;Oceanview Walk links Burleigh Head and Tallebudgera Creek whilst offering stunning coastal scenery.;Burleigh Head National Park',
+            'Bu_Hi_Rf;Rainforest Circuit;2.3km,45min,Lookout,Coastal,Rainforest;Rainforest Circuit winds through the coastal rainforest of Burleigh Head, and links up with Oceanview Walk.;Burleigh Head National Park',
+            'Bu_Lo_Tum;Tumgun Lookout;600m,15min,Lookout,Coastal,Rainforest;Tumgun Lookout, found on the Rainforest Walk, provides stunning ocean views from Talebudgera Creek to Coolangatta.;Burleigh Head National Park',
+            'Bu_Lo_Jeb;Jebbribillum Lookout;250m,10min,Lookout,Coastal,Rainforest;Jebbribillum Lookout, found on the Rainforest Walk, provides views north from Miami Beach to Surfers Paradise.;Burleigh Head National Park',
+            'Bu_Be_Ech;Echo Beach;100m walk,Secluded,Beach,Creek,Sheltered;Echo Beach is nestled in the shallow shores of Tallebudger Creek, accessed from Rainforest Walk.;Burleigh Head National Park'
         ];
         let text = " ";
 
@@ -50,9 +56,9 @@
 
 
             document.querySelector(".Main").innerHTML +=
-                '<div id="' + (A1[1].trim()) + '"> <img src = "Images//' + A1[0] + '.webp"><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a></div>';
+                '<div id="' + (A1[1].replace(/\s+/g, '')) + '"> <img src = "Images//' + A1[0] + '.webp"><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a></div>';
 
-            text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].trim()) + "' onclick='myFunction()'>" + A1[1] + "</a>";
+            text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + "</a>";
 
 
         }
