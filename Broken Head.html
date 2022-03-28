@@ -17,6 +17,8 @@
 <body>
 
     <div class="Main">
+
+
     </div>
     <div class="Nav">
         <a href="javascript:void(0);" onclick="myFunction()">
@@ -37,7 +39,8 @@
 
     <script>
         const B1 = [
-            "Bu_Hi_Oc;A Walk;1.2km one-way,30mins,Lookouts,Coastal;A Walk links two places whilst offering stunning coastal scenery.;A Fantastic National Park"
+            ";Broken Head Beach;1km+,Patrolled,Beach,Rainforest,Headland;Broken Head Beach is a quiet beach found at the Northern tip of the reserve.;Broken Head Nature Reserve",
+            "BrHe_Be_WhBe;Whites Beach;300m,10min,Beach,Rainforest,Headland,Secluded;Whites Beach is found at the end of the nature reserve and offers a secluded beach between rocks and sea caves following a steep descent from the carpark.;Broken Head Nature Reserve"
         ];
         let text = " ";
 
@@ -50,9 +53,9 @@
 
 
             document.querySelector(".Main").innerHTML +=
-                '<div id="' + (A1[1].trim()) + '"> <img src = "Images//' + A1[0] + '.webp"><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a></div>';
+                '<div id="' + (A1[1].replace(/\s+/g, '')) + '"> <img src = "Images//' + A1[0] + '.webp"><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a></div>';
 
-            text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].trim()) + "' onclick='myFunction()'>" + A1[1] + "</a>";
+            text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + "</a>";
 
 
         }
@@ -102,3 +105,4 @@
     </script>
 
 </body></html>
+
