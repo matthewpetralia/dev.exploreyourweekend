@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Springbrook Guide</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,8 @@
 <body>
 
     <div class="Main">
+
+
     </div>
     <div class="Nav">
         <a href="javascript:void(0);" onclick="myFunction()">
@@ -37,7 +39,14 @@
 
     <script>
         const B1 = [
-            "Bu_Hi_Oc;A Walk;1.2km one-way,30mins,Lookouts,Coastal;A Walk links two places whilst offering stunning coastal scenery.;A Fantastic National Park"
+            'Sp_Hi_Purl;Purling Brook Falls;4km,2hrs,Hike,Waterfall,Rainforest;Purling Brook Falls is a stunning walk winding down the cliffside into an equally stunning waterfall.;Springbrook National Park',
+            'Sp_Hi_Warrie;Warrie Circuit;17km,7hrs,Hike,Waterfall,Rainforest,Lookout;Warrie Circuit descends deep into some of the best rainforest scenery, waterfalls and lookouts Springbrook has to offer.;Springbrook National Park',
+            'SP_Lo_Best;Best of All Lookout;600m,30mins,Rainforest;Best of All Lookout truly lives up to its name, offering stunning views into the Northern NSW hinterland and coastline.;Springbrook National Park',
+            'SP_Lo_Wunburra;Wunburra Lookout;50m,1min,Lookout,Rainforest;Wunburra Lookout is the first lookout on the Springbrook plateau and offers stunning views over the National Park out to the Gold Coast&#39s iconic skyline.;Springbrook National Park',
+            'SP_Dr_Lyre;Lyrebird Ridge Rd;4km,6mins,Drive,Rainforest,Lookout;Lyrebird Ridge Rd is a quiet but stunning narrow road that winds beneath the treetops on the way down from Best of All Lookout.;Springbrook National Park',
+            'SP_Dr_Adv;Springbrook via Advancetown;26km,25mins,Drive,Rainforest,Lookout;Taking a long and gradual approach, this road winds around Hinze Dam at 80km/h. The high speed limit eventually gives way to a slower, steeper windier section until it reaches the Springbrook plateau.;Springbrook National Park',
+            'Sp_Dr_Mudg;Springbrook via Mudgeeraba;20km,25mins,Drive,Waterfall,Rainforest;Beginning off the motorway in Mudgeeraba, this road winds steeply up the mountain with sharp turns, one way sections and beautiful scenery.;Springbrook National Park',
+            'SP_Dr_Murw;Springbrook via Murwillumbah;53km,1hr,Drive,Rainforest,Lookout;Taking in some spectacular scenery in the hinterland of Northern NSW, this winding road shows Springbrook from a unique yet beautiful perspective from the other side of the rim volcano.;Springbrook National Park'
         ];
         let text = " ";
 
@@ -50,16 +59,16 @@
 
 
             document.querySelector(".Main").innerHTML +=
-                '<div id="' + (A1[1].trim()) + '"> <img src = "Images//' + A1[0] + '.webp"><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a></div>';
+                '<div id="' + (A1[1].replace(/\s+/g, '')) + '"> <img src = "Images//' + A1[0] + '.webp"><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a></div>';
 
-            text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].trim()) + "' onclick='myFunction()'>" + A1[1] + "</a>";
+            text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + "</a>";
 
 
         }
 
         document.querySelector(".Nav .tags").innerHTML = '<a href="index.html"><span class="material-icons-outlined">home</span></a>' + text;
 
-
+        document.getElementsByTagName("title")[0].innerHTML = document.querySelector(".Main h4").innerHTML;
 
 
         for (let j = 0; j < (document.querySelectorAll(".Main > div")).length; j++) {

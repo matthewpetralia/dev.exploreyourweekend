@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Springbrook Guide</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,11 +14,9 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body class="">
+<body>
 
     <div class="Main">
-
-
     </div>
     <div class="Nav">
         <a href="javascript:void(0);" onclick="myFunction()">
@@ -39,7 +37,7 @@
 
     <script>
         const B1 = [
-            "Bu_Hi_Oc;Oceanview Walk;1.2km one-way,30mins,Lookouts,Coastal;Oceanview Walk links Burleigh Heads and Tallebudgera Creek whilst offering stunning coastal scenery.;Burleigh Head National Park"
+            "Bu_Hi_Oc;A Walk;1.2km one-way,30mins,Lookouts,Coastal;A Walk links two places whilst offering stunning coastal scenery.;A Fantastic National Park"
         ];
         let text = " ";
 
@@ -61,6 +59,7 @@
 
         document.querySelector(".Nav .tags").innerHTML = '<a href="index.html"><span class="material-icons-outlined">home</span></a>' + text;
 
+        document.getElementsByTagName("title")[0].innerHTML = document.querySelector(".Main h4").innerHTML;
 
 
 

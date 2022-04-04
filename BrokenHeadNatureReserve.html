@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Springbrook Guide</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,11 +39,8 @@
 
     <script>
         const B1 = [
-            'Bu_Hi_Oc;Oceanview Walk;1.2km one-way,30mins,Lookouts,Coastal;Oceanview Walk links Burleigh Head and Tallebudgera Creek whilst offering stunning coastal scenery.;Burleigh Head National Park',
-            'Bu_Hi_Rf;Rainforest Circuit;2.3km,45min,Lookout,Coastal,Rainforest;Rainforest Circuit winds through the coastal rainforest of Burleigh Head, and links up with Oceanview Walk.;Burleigh Head National Park',
-            'Bu_Lo_Tum;Tumgun Lookout;600m,15min,Lookout,Coastal,Rainforest;Tumgun Lookout, found on the Rainforest Walk, provides stunning ocean views from Talebudgera Creek to Coolangatta.;Burleigh Head National Park',
-            'Bu_Lo_Jeb;Jebbribillum Lookout;250m,10min,Lookout,Coastal,Rainforest;Jebbribillum Lookout, found on the Rainforest Walk, provides views north from Miami Beach to Surfers Paradise.;Burleigh Head National Park',
-            'Bu_Be_Ech;Echo Beach;100m walk,Secluded,Beach,Creek,Sheltered;Echo Beach is nestled in the shallow shores of Tallebudger Creek, accessed from Rainforest Walk.;Burleigh Head National Park'
+            ";Broken Head Beach;1km+,Patrolled,Beach,Rainforest,Headland;Broken Head Beach is a quiet beach found at the Northern tip of the reserve.;Broken Head Nature Reserve",
+            "BrHe_Be_WhBe;Whites Beach;300m,10min,Beach,Rainforest,Headland,Secluded;Whites Beach is found at the end of the nature reserve and offers a secluded beach between rocks and sea caves following a steep descent from the carpark.;Broken Head Nature Reserve"
         ];
         let text = " ";
 
@@ -65,6 +62,7 @@
 
         document.querySelector(".Nav .tags").innerHTML = '<a href="index.html"><span class="material-icons-outlined">home</span></a>' + text;
 
+        document.getElementsByTagName("title")[0].innerHTML = document.querySelector(".Main h4").innerHTML;
 
 
 
@@ -108,3 +106,4 @@
     </script>
 
 </body></html>
+
