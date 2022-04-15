@@ -238,14 +238,13 @@ h3 {
     border-width: .25vh;
 }
 
-.tags a {
+.tags a{
     background-color: var(--Green);
     padding: 1vh 3vw;
     margin-right: 1vw;
     margin-bottom: .5vh;
     border-radius: 3vh;
     font-size: 2vh;
-
 }
 
 .tags a::after {
@@ -288,6 +287,10 @@ h3 {
     border-radius: 20px 20px 0 0;
     padding-bottom: 6vh;
     overflow: hidden;
+}
+
+.tags div:empty{
+    display: none;
 }
 
 .Nav .InfoPanel {

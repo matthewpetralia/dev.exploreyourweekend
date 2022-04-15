@@ -34,7 +34,7 @@ function writeHTML() {
             break;
         case "Best Gold Coast Beaches":
             B1 = [
-                defaultMain
+                'GCBe_Spt;The Spit Beach (Phillip Park);1km+ wide,Patrolled,Beach,Parklands;The Spit Beach spans several kilometres of the ocean side of Southport&#39s spit and broadwater. The beach has dog off-leash and on-leash areas and a calmer western side. ;Gold Coast Beaches', 'GCBe_SurfP;Surfers Paradise Beach;1km+ wide,Patrolled,Beach,Tourist Spot;Surfers Paradise Beach is the Gold Coast&#39s best known and busiest beach, with plenty of tourist attractions in the nearby Gold Coast CBD.;Gold Coast Beaches', 'GCBe_Miami;Miami Beach;1km+ wide,Patrolled,Beach;Miami Beach is a few kilometres south of Surfers Paradise but with less crowds and BBQ facilities on the foreshore.;Gold Coast Beaches', 'GCBe_BurlBe;Burleigh Beach;1km+ wide,Patrolled,Beach,Lookouts,National Park nearby;Burleigh Beach is nestled between Burleigh Head and Little Burleigh, giving the best of both space and seclusion. Adjacent to <a href="BurleighHeadNationalPark.html">Burleigh Head National Park</a>.;Gold Coast Beaches', 'GCBe_Currm;Currumbin Beach;1km+ wide,Patrolled,Beach,Surf,Attractions nearby;Currumbin Beach is located at the mouth of Currumbin Creek, known for good waves and Currumbin Rock.;Gold Coast Beaches', 'GCBe_Snpp;Snapper Rocks;1km+ wide,Patrolled,Beach,Surf;Snapper Rocks is the Gold Coast&#39s southernmost beach located at Coolangatta and known for its surfing waves.;Gold Coast Beaches'
                 ];
             break;
         case "Broken Head Nature Reserve":
@@ -64,7 +64,7 @@ function writeHTML() {
 
 
         document.querySelector(".Main").innerHTML +=
-            '<div id="' + (A1[1].replace(/\s+/g, '')) + '"> <img src = "Images//' + A1[0] + '.webp"><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a></div>';
+            '<div id="' + (A1[1].replace(/\s+/g, '')) + '"> <img src = "Images//' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + 'Images/IMG_1540.jpg' + "'" + ';"><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div></div>';
 
         text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + "</a>";
 
