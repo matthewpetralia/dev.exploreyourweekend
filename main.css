@@ -44,9 +44,10 @@ body {
     max-width: 100%;
 }
 
-#LyrebirdRidgeRd img{
+#LyrebirdRidgeRd img {
     object-position: 20%;
 }
+
 #RainforestCircuit img {
     object-position: 40%;
 }
@@ -146,6 +147,22 @@ h3 {
     font-size: 3vh;
 }
 
+#Status {
+    height: 5%;
+    background: var(--Sand);
+    padding: 2.5%;
+    color: var(--Green);
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 130%;
+    display: flex;
+    align-items: center;
+}
+
+#Status img {
+    height: 100%;
+    margin-right: 1em;
+}
 
 
 .Landing,
@@ -174,11 +191,20 @@ h3 {
 .Landing > div,
 .Main > div {
     height: 100%;
-    width: 100vw;
+    width: 100%;
+    background: transparent;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
     position: relative;
+}
 
+.Main > div {
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    
 }
 
 .Landing > div {
@@ -238,7 +264,7 @@ h3 {
     border-width: .25vh;
 }
 
-.tags a{
+.tags a {
     background-color: var(--Green);
     padding: 1vh 3vw;
     margin-right: 1vw;
@@ -289,7 +315,7 @@ h3 {
     overflow: hidden;
 }
 
-.tags div:empty{
+.tags div:empty {
     display: none;
 }
 

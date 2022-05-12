@@ -2,69 +2,45 @@
 /*global require*/
 
 document.getElementsByTagName("head")[0].innerHTML += `
+    <link rel="icon" type="image/x-icon" href="SVG/Explore%20your%20Weekend%20Logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Hubballi&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">`;
 
 function writeHTML() {
-    let B1;
+    
+    let writeContent;
     let defaultMain = "Bu_Hi_Oc;A Walk;1.2km one-way,30mins,Lookouts,Coastal;A Fantastic Walk links two places whilst offering stunning coastal scenery.;A Fantastic National Park";
 
-    switch (document.getElementsByTagName("title")[0].innerHTML) {
-        case "Springbrook National Park":
-            B1 = [
-            'Sp_Hi_Purl;Purling Brook Falls;4km,2hrs,Hike,Waterfall,Rainforest;Purling Brook Falls is a stunning walk winding down the cliffside into an equally stunning waterfall.;Springbrook National Park',
-            'Sp_Hi_Warrie;Warrie Circuit;17km,7hrs,Hike,Waterfall,Rainforest,Lookout;Warrie Circuit descends deep into some of the best rainforest scenery, waterfalls and lookouts Springbrook has to offer.;Springbrook National Park',
-            'SP_Lo_Best;Best of All Lookout;600m,30mins,Rainforest;Best of All Lookout truly lives up to its name, offering stunning views into the Northern NSW hinterland and coastline.;Springbrook National Park',
-            'SP_Lo_Wunburra;Wunburra Lookout;50m,1min,Lookout,Rainforest;Wunburra Lookout is the first lookout on the Springbrook plateau and offers stunning views over the National Park out to the Gold Coast&#39s iconic skyline.;Springbrook National Park',
-            'SP_Dr_Lyre;Lyrebird Ridge Rd;4km,6mins,Drive,Rainforest,Lookout;Lyrebird Ridge Rd is a quiet but stunning narrow road that winds beneath the treetops on the way down from Best of All Lookout.;Springbrook National Park',
-            'SP_Dr_Adv;Springbrook via Advancetown;26km,25mins,Drive,Rainforest,Lookout;Taking a long and gradual approach, this road winds around Hinze Dam at 80km/h. The high speed limit eventually gives way to a slower, steeper windier section until it reaches the Springbrook plateau.;Springbrook National Park',
-            'Sp_Dr_Mudg;Springbrook via Mudgeeraba;20km,25mins,Drive,Waterfall,Rainforest;Beginning off the motorway in Mudgeeraba, this road winds steeply up the mountain with sharp turns, one way sections and beautiful scenery.;Springbrook National Park',
-            'SP_Dr_Murw;Springbrook via Murwillumbah;53km,1hr,Drive,Rainforest,Lookout;Taking in some spectacular scenery in the hinterland of Northern NSW, this winding road shows Springbrook from a unique yet beautiful perspective from the other side of the rim volcano.;Springbrook National Park'
-        ];
-            break;
-        case "Burleigh Head National Park":
-            B1 = [
-            'Bu_Hi_Oc;Oceanview Walk;1.2km one-way,30mins,Lookouts,Coastal;Oceanview Walk links Burleigh Head and Tallebudgera Creek whilst offering stunning coastal scenery.;Burleigh Head National Park',
-            'Bu_Hi_Rf;Rainforest Circuit;2.3km,45min,Lookout,Coastal,Rainforest;Rainforest Circuit winds through the coastal rainforest of Burleigh Head, and links up with Oceanview Walk.;Burleigh Head National Park',
-            'Bu_Lo_Tum;Tumgun Lookout;600m,15min,Lookout,Coastal,Rainforest;Tumgun Lookout, found on the Rainforest Walk, provides stunning ocean views from Talebudgera Creek to Coolangatta.;Burleigh Head National Park',
-            'Bu_Lo_Jeb;Jebbribillum Lookout;250m,10min,Lookout,Coastal,Rainforest;Jebbribillum Lookout, found on the Rainforest Walk, provides views north from Miami Beach to Surfers Paradise.;Burleigh Head National Park',
-//            'Bu_Be_Ech;Echo Beach;100m walk,Secluded,Beach,Creek,Sheltered;Echo Beach is nestled in the shallow shores of Tallebudger Creek, accessed from Rainforest Walk.;Burleigh Head National Park'
-        ];
-            break;
-        case "Best Gold Coast Beaches":
-            B1 = [
-                'GCBe_Spt;The Spit Beach (Phillip Park);1km+ wide,Patrolled,Beach,Parklands;The Spit Beach spans several kilometres of the ocean side of Southport&#39s spit and broadwater. The beach has dog off-leash and on-leash areas and a calmer western side. ;Gold Coast Beaches', 'GCBe_SurfP;Surfers Paradise Beach;1km+ wide,Patrolled,Beach,Tourist Spot;Surfers Paradise Beach is the Gold Coast&#39s best known and busiest beach, with plenty of tourist attractions in the nearby Gold Coast CBD.;Gold Coast Beaches', 'GCBe_Miami;Miami Beach;1km+ wide,Patrolled,Beach;Miami Beach is a few kilometres south of Surfers Paradise but with less crowds and BBQ facilities on the foreshore.;Gold Coast Beaches', 'GCBe_BurlBe;Burleigh Beach;1km+ wide,Patrolled,Beach,Lookouts,National Park nearby;Burleigh Beach is nestled between Burleigh Head and Little Burleigh, giving the best of both space and seclusion. Adjacent to <a href="BurleighHeadNationalPark.html">Burleigh Head National Park</a>.;Gold Coast Beaches', 'GCBe_Currm;Currumbin Beach;1km+ wide,Patrolled,Beach,Surf,Attractions nearby;Currumbin Beach is located at the mouth of Currumbin Creek, known for good waves and Currumbin Rock.;Gold Coast Beaches', 'GCBe_Snpp;Snapper Rocks;1km+ wide,Patrolled,Beach,Surf;Snapper Rocks is the Gold Coast&#39s southernmost beach located at Coolangatta and known for its surfing waves.;Gold Coast Beaches'
-                ];
-            break;
-        case "Broken Head Nature Reserve":
-            B1 = [
-            ";Broken Head Beach;1km+,Patrolled,Beach,Rainforest,Headland;Broken Head Beach is a quiet beach found at the Northern tip of the reserve.;Broken Head Nature Reserve",
-            "BrHe_Be_WhBe;Whites Beach;300m,10min,Beach,Rainforest,Headland,Secluded;Whites Beach is found at the end of the nature reserve and offers a secluded beach between rocks and sea caves following a steep descent from the carpark.;Broken Head Nature Reserve"
-        ];
-            break;
-        case "Best Northern NSW Beaches":
-            B1 = [
-                defaultMain
-                ];
-            break;
-        case 0:
-            B1 = 0;
-    }
-
+    let createNav = `
+        <div class="Nav">
+        <a href="javascript:void(0);" onclick="myFunction()">
+            <span class="material-icons-outlined" id="expand">expand_less</span>
+        </a>
+        <div id="myLinks">
+            <div class="InfoPanel">
+                <h4></h4>
+                <h3>Explore</h3>
+                <div class="tags">
+                </div>
+            </div>
+        </div>
+    </div>`
+    document.querySelector(".Main").insertAdjacentHTML('afterend', createNav)
 
     let text = " ";
 
-    for (e = 0; e < B1.length; e++) {
+    for (e = 0; e < document.querySelector(".Main").children.length; e++) {
 
 
-        const A1 = B1[e].split(";");
+        const A1 = document.querySelector(".Main").children[e].innerHTML.split(";");
         let ref = "A";
 
 
 
-        document.querySelector(".Main").innerHTML +=
-            '<div id="' + (A1[1].replace(/\s+/g, '')) + '"> <img src = "Images//' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + 'Images/IMG_1540.jpg' + "'" + ';"><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div></div>';
+        document.querySelector(".Main").children[e].innerHTML =
+            '<img src = "Images//' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + 'Images/IMG_1540.jpg' + "'" + ';"><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div>';
+
 
         text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + "</a>";
 
@@ -73,7 +49,7 @@ function writeHTML() {
 
     document.querySelector(".Nav .tags").innerHTML = '<a href="index.html"><span class="material-icons-outlined">home</span></a>' + text;
 
-    //    document.getElementsByTagName("title")[0].innerHTML = document.querySelector(".Main h4").innerHTML;
+    document.getElementsByTagName("title")[0].innerHTML += " | Explore your Weekend";
 
 
     for (let j = 0; j < (document.querySelectorAll(".Main > div")).length; j++) {
@@ -90,6 +66,9 @@ function writeHTML() {
 
         (document.getElementsByClassName('bwd')[j + 1]).href = "#" + (document.querySelectorAll(".Main > div")[j]).id;
     }
+
+
+
 }
 
 function myFunction() {
