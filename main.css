@@ -192,7 +192,7 @@ h3 {
 .Main > div {
     height: 100%;
     width: 100%;
-    background: transparent;
+    background: white;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
     position: relative;

@@ -7,10 +7,11 @@ document.getElementsByTagName("head")[0].innerHTML += `
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Hubballi&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">`;
 
+
 function writeHTML() {
-    
+    let main = document.querySelector(".Main");
+
     let writeContent;
-    let defaultMain = "Bu_Hi_Oc;A Walk;1.2km one-way,30mins,Lookouts,Coastal;A Fantastic Walk links two places whilst offering stunning coastal scenery.;A Fantastic National Park";
 
     let createNav = `
         <div class="Nav">
@@ -26,20 +27,20 @@ function writeHTML() {
             </div>
         </div>
     </div>`
-    document.querySelector(".Main").insertAdjacentHTML('afterend', createNav)
+    main.insertAdjacentHTML('afterend', createNav)
 
     let text = " ";
 
-    for (e = 0; e < document.querySelector(".Main").children.length; e++) {
+    for (e = 0; e < main.children.length; e++) {
 
 
-        const A1 = document.querySelector(".Main").children[e].innerHTML.split(";");
+        const A1 = main.children[e].innerHTML.split(";");
         let ref = "A";
 
 
 
-        document.querySelector(".Main").children[e].innerHTML =
-            '<img src = "Images//' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + 'Images/IMG_1540.jpg' + "'" + ';"><a class="bwd" href="#"></a><a class="fwd" href="#' + ref + (e + 2) + '"></a><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div>';
+        main.children[e].innerHTML =
+            '<img src = "Images//' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + 'Images/IMG_1540.jpg' + "'" + ';"><a class="bwd"></a><a class="fwd"></a><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div>';
 
 
         text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + "</a>";
@@ -66,9 +67,6 @@ function writeHTML() {
 
         (document.getElementsByClassName('bwd')[j + 1]).href = "#" + (document.querySelectorAll(".Main > div")[j]).id;
     }
-
-
-
 }
 
 function myFunction() {
