@@ -22,7 +22,6 @@ function writeHTML() {
         </a>
         <div id="myLinks">
             <div class="InfoPanel">
-                <h3>Explore your Weekend</h3>
                 <div class="tags">
                 </div>
             </div>
@@ -49,7 +48,7 @@ function writeHTML() {
 
     }
 
-    document.querySelector(".Nav .tags").innerHTML = '<a href="../"><span class="material-icons-outlined">home</span></a>' + text;
+    document.querySelector(".Nav .tags").innerHTML = '<a href="../"><img src="/SVG/Explore%20your%20Weekend%20Logo.svg"></a>' + text;
 
     document.getElementsByTagName("title")[0].innerHTML += " | Explore your Weekend";
 
