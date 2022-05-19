@@ -22,7 +22,7 @@ body {
 :root {
     --Green-Op: rgba(53, 105, 90, .97);
     --Green: rgba(53, 105, 90, 1);
-    --Sand-Op: rgba(230, 224, 218, .97);
+    --Sand-Op: rgba(230, 224, 218, .8);
     --Sand: rgba(230, 224, 218, 1);
     --MainHeight: 100%;
 }
@@ -44,7 +44,7 @@ body {
     max-width: 100%;
 }
 
-#RainforestCircuit img {
+#RainforestCircuit img, #BurleighBeach img {
     object-position: 10%;
 }
 
@@ -264,6 +264,10 @@ h3 {
 .Nav .InfoPanel .tags a:first-child {
     text-align: center;
     background: transparent;
+}
+
+.Nav .InfoPanel .tags a:first-child:hover {
+    background: var(--Sand-Op);
 }
 
 .Nav .InfoPanel {
