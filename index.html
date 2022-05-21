@@ -6,6 +6,10 @@
     <link rel="icon" type="image/x-icon" href="SVG/Explore%20your%20Weekend%20Logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="normalize.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore your Weekend makes finding hikes, drives and beaches easy.">
+    <meta name="keywords" content="Explore your Weekend, Explore, Beaches, Hikes, Scenic Drives, National Parks, Nature, Outdoors, Travel, Explore, Discover, Adventure">
+    <meta name="author" content="Matthew Petralia">    
     <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
     <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
     <!--    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Hubballi&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">-->
@@ -44,6 +48,7 @@
             'GCBe_Spt;Gold Coast;Best Beaches;QLD,Gold Coast Region,Beaches,Coastal;Gold Coast',
             'BrHe;Broken Head;Nature Reserve;NSW,Byron Bay Region,Headland,Rainforest,Lookouts,Coastal;Broken Head',
             'NNSWBe;Northern NSW;Best Beaches;NSW,Tweed Heads to Esk,Rainforest,Lookouts,Coastal;Northern NSW',
+            'UltGuide;SEQ and Northern NSW;Ultimate Guide;SEQ & NNSW,Beaches,Rainforest,Lookouts,Coastal',
         ];
         let text = " ";
 
@@ -65,9 +70,9 @@
 
         document.querySelector(".Nav .tags").innerHTML = '<a href="../"><img src="/SVG/Explore%20your%20Weekend%20Logo.svg"></a>' + text;
 
-        document.querySelector(".Landing").innerHTML +=
-            '<div id="Acknowledgements"><div class="InfoPanel"><h3>Acknowledgements</h3><h4>A big thanks to</h4><div class="tagContent">Me,Myself,I</div></div></div>';
-        document.querySelector("#myLinks .tags").innerHTML += "<a href='#Acknowledgements' onclick='myFunction()'>Acknowledgements</a>";
+//        document.querySelector(".Landing").innerHTML +=
+//            '<div id="Acknowledgements"><div class="InfoPanel"><h3>Acknowledgements</h3><h4>A big thanks to</h4><div class="tagContent">Me,Myself,I</div></div></div>';
+//        document.querySelector("#myLinks .tags").innerHTML += "<a href='#Acknowledgements' onclick='myFunction()'>Acknowledgements</a>";
 
 
         for (let j = 0; j < (document.querySelectorAll(".Landing > div")).length; j++) {
