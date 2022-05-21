@@ -3,8 +3,8 @@
 
 document.getElementsByTagName("head")[0].innerHTML += `
     <link rel="icon" type="image/x-icon" href="/SVG/Explore%20your%20Weekend%20Logo.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <link href="https://use.typekit.net/ade3twf.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://use.typekit.net/ade3twf.css" rel="stylesheet">
 `;
 
 
