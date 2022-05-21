@@ -3,8 +3,8 @@
 
 document.getElementsByTagName("head")[0].innerHTML += `
     <link rel="icon" type="image/x-icon" href="/SVG/Explore%20your%20Weekend%20Logo.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/ade3twf.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <link href="https://use.typekit.net/ade3twf.css" rel="preload" as="style" onload="this.rel='stylesheet'">
 `;
 
 
@@ -38,7 +38,8 @@ function writeHTML() {
 
 
         main.children[e].innerHTML =
-            '<img src = "/Images//' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + '/Images/IMG_1540.jpg' + "'" + ';"><a class="bwd"></a><a class="fwd"></a><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div>';
+            '<picture><source srcset="../Images/m/m-' + A1[0] + '.webp" media="(orientation: portrait)"><img src="../Images/' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + '../Images/m/m-Sp_.webp' + "'" + ';" alt="' + A1[1] + ' ' + A1[4] + '"></picture>' +
+            '<a class="bwd"></a><a class="fwd"></a><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div>';
 
 
         text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + "</a>";
