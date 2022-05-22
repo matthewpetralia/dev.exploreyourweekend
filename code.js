@@ -38,7 +38,7 @@ function writeHTML() {
 
 
         main.children[e].innerHTML =
-            '<picture><source srcset="../Images/m/m-' + A1[0] + '.webp" media="(orientation: portrait)"><img src="../Images/' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + '../Images/m/m-Sp_.webp' + "'" + ';" alt="' + A1[1] + ' ' + A1[4] + '"></picture>' +
+            '<picture><source srcset="../Images/m/m-' + A1[0] + '.webp" media="(orientation: portrait)"><img src="../Images/' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + '../Images/m/m-Sp_.webp' + "'" + ';" alt="' + A1[1] + ' ' + A1[4] + ' - Explore your Weekend"></picture>' +
             '<a class="bwd"></a><a class="fwd"></a><div class="InfoPanel"><h4>' + A1[4] + '</h4><h3>' + A1[1] + '</h3><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div>';
 
 
@@ -47,7 +47,7 @@ function writeHTML() {
 
     }
 
-    document.querySelector(".Nav .tags").innerHTML = '<a href="../"><img src="/SVG/Explore%20your%20Weekend%20Logo.svg"></a>' + text;
+    document.querySelector(".Nav .tags").innerHTML = '<a href="../"><img src="/SVG/Explore%20your%20Weekend%20Logo.svg" alt="Explore your Weekend"></a>' + text;
 
     document.getElementsByTagName("title")[0].innerHTML += " | Explore your Weekend";
 
