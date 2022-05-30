@@ -2,18 +2,14 @@
 <html>
 
 <head>
-    <title>Explore your Weekend</title>
-    <link rel="icon" type="image/x-icon" href="SVG/Explore%20your%20Weekend%20Logo.svg">
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="normalize.css">
-    <meta charset="UTF-8">
     <meta name="description" content="Explore your Weekend makes finding hikes, drives and beaches easy.">
-    <meta name="keywords" content="Explore your Weekend, Explore, Beaches, Hikes, Scenic Drives, National Parks, Nature, Outdoors, Travel, Explore, Discover, Adventure">
     <meta name="author" content="Matthew Petralia">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <link href="https://use.typekit.net/ade3twf.css" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <link href="code.js">
+    <script src="code.js"></script>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="normalize.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98383758-3">
     </script>
@@ -24,93 +20,23 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
+
         gtag('config', 'UA-98383758-3');
 
     </script>
 </head>
 
 <body class="ind">
-    <!--    <div id="Status"><img src="/SVG/Explore%20your%20Weekend%20Logo.svg"> Explore your Weekend</div>-->
     <div class="Landing">
-
-    </div>
-    <div class="Nav">
-        <a href="javascript:void(0);" onclick="myFunction()">
-            <span class="material-icons-outlined" id="expand">expand_less</span>
-        </a>
-        <div id="myLinks">
-            <div class="InfoPanel">
-                <div class="tags">
-
-                </div>
-            </div>
-        </div>
-
-
+        <div id='SpringbrookNationalPark'>Sp_;Springbrook;National Park;QLD,Gold Coast Region,Rainforest,Lookouts,Waterfalls;;Springbrook</div>
+        <div id='BurleighHeadNationalPark'>Burl;Burleigh Head;National Park;QLD,Gold Coast Region,Coastal,Rainforest,Lookouts;;Burleigh Head</div>
+        <div id='GoldCoastBestBeaches'>GCBe_Spt;Gold Coast;Best Beaches;QLD,Gold Coast Region,Beaches,Coastal;;Gold Coast</div>
+        <div id='BrokenHeadNatureReserve'>BrHe;Broken Head;Nature Reserve;NSW,Byron Bay Region,Headland,Rainforest,Lookouts,Coastal;;Broken Head</div>
+        <div id='NorthernNSWBestBeaches'>NNSWBe;Northern NSW;Best Beaches;NSW,Tweed Heads to Esk,Rainforest,Lookouts,Coastal;;Northern NSW</div>
     </div>
 
     <script>
-        const B1 = [
-            'Sp_;Springbrook;National Park;QLD,Gold Coast Region,Rainforest,Lookouts,Waterfalls;Springbrook',
-            'Burl;Burleigh Head;National Park;QLD,Gold Coast Region,Coastal,Rainforest,Lookouts;Burleigh Head',
-            'GCBe_Spt;Gold Coast;Best Beaches;QLD,Gold Coast Region,Beaches,Coastal;Gold Coast',
-            'BrHe;Broken Head;Nature Reserve;NSW,Byron Bay Region,Headland,Rainforest,Lookouts,Coastal;Broken Head',
-            'NNSWBe;Northern NSW;Best Beaches;NSW,Tweed Heads to Esk,Rainforest,Lookouts,Coastal;Northern NSW',
-            'UltGuide;SEQ and Northern NSW;Ultimate Guide;SEQ & NNSW,Beaches,Rainforest,Lookouts,Coastal',
-        ];
-        let text = " ";
-
-        for (e = 0; e < B1.length; e++) {
-
-
-            const A1 = B1[e].split(";");
-            let ref = "A";
-
-
-
-            document.querySelector(".Landing").innerHTML +=
-                '<div id="' + (A1[1].replace(/\s+/g, '')) + '">' +
-                '<picture><source srcset="../Images/m/m-' + A1[0] + '.webp" media="(orientation: portrait)"><img src="../Images/' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + '/Images/m/m-Sp_.webp' + "'" + ';" alt="' + A1[1] + ' ' + A1[2] + ' - Explore your Weekend"></picture>' +
-                '<div class="InfoPanel"><h3>' + A1[1] + '</h3><h4>' + A1[2] + '</h4><div class="tagContent">' + A1[3] + '</div></div><a class="fwd" href="' + (A1[1].replace(/\s+/g, '')) + (A1[2].replace(/\s+/g, '')) + '"></a></div>';
-
-            text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + " " + A1[2] + "</a>";
-
-
-        }
-
-        document.querySelector(".Nav .tags").innerHTML = '<a href="../"><img src="/SVG/Explore%20your%20Weekend%20Logo.svg"></a>' + text;
-
-        //        document.querySelector(".Landing").innerHTML +=
-        //            '<div id="Acknowledgements"><div class="InfoPanel"><h3>Acknowledgements</h3><h4>A big thanks to</h4><div class="tagContent">Me,Myself,I</div></div></div>';
-        //        document.querySelector("#myLinks .tags").innerHTML += "<a href='#Acknowledgements' onclick='myFunction()'>Acknowledgements</a>";
-
-
-        for (let j = 0; j < (document.querySelectorAll(".Landing > div")).length; j++) {
-            var allTheData =
-                document.getElementsByClassName('tagContent')[j].textContent.split(',');
-            var separateList = '<div class="tags">';
-            allTheData.forEach(function(value) {
-                separateList += '<div>' + value + '</div>';
-            });
-            separateList += '</div>';
-            document.getElementsByClassName("tagContent")[j].innerHTML = separateList;
-        }
-
-
-
-
-        function myFunction() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-                document.querySelector(".Nav > a").style.borderRadius = "3vh 3vh 0 0";
-                document.getElementById("expand").innerHTML = "expand_less";
-            } else {
-                x.style.display = "block";
-                document.querySelector(".Nav > a").style.borderRadius = "0px";
-                document.getElementById("expand").innerHTML = "expand_more";
-            }
-        }
+        writeIndex();
 
     </script>
 </body>
