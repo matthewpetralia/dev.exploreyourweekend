@@ -168,15 +168,20 @@ h2 {
 }
 
 #Status {
-    height: 5%;
+    height: 10%;
     background: var(--Sand);
     padding: 2.5%;
     color: var(--Green);
     box-sizing: border-box;
     font-family: futura-pt, sans-serif;
-    font-size: 130%;
+    font-size: 1.5vh;
     display: flex;
     align-items: center;
+}
+
+#Status h2{
+    font-size: 1.5vh;
+    margin: 0;
 }
 
 #Status img {

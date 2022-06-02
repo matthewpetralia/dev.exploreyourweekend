@@ -2,9 +2,13 @@
 /*global require*/
 
 document.getElementsByTagName("head")[0].innerHTML += `
+    <html lang = "en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" type="image/x-icon" href="/SVG/Explore%20your%20Weekend%20Logo.svg">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 `;
+    
+document.getElementsByTagName("title")[0].innerHTML += " | Explore your Weekend";
 
 
 function writeHTML() {
@@ -43,8 +47,6 @@ function writeHTML() {
     }
 
     document.querySelector(".Nav .tags").innerHTML = '<h1><a href="../"><img src="/SVG/Explore%20your%20Weekend%20Logo.svg" alt="Explore your Weekend"></a></h1>' + text;
-
-    document.getElementsByTagName("title")[0].innerHTML += " | Explore your Weekend";
 
     document.getElementsByTagName("head")[0].innerHTML +=
         '<link href="https://use.typekit.net/ade3twf.css" rel="stylesheet">'
@@ -109,8 +111,6 @@ function writeIndex() {
     }
 
     document.querySelector(".Nav .tags").innerHTML = '<h1><a href="../"><img src="/SVG/Explore%20your%20Weekend%20Logo.svg" alt="Explore your Weekend"></a></h1>' + text;
-
-    document.getElementsByTagName("title")[0].innerHTML += " | Explore your Weekend";
 
     document.getElementsByTagName("head")[0].innerHTML +=
         '<link href="https://use.typekit.net/ade3twf.css" rel="stylesheet">'
