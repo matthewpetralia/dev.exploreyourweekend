@@ -10,6 +10,11 @@ document.getElementsByTagName("head")[0].innerHTML += `
     
 document.getElementsByTagName("title")[0].innerHTML += " | Explore your Weekend";
 
+var getUrl = window.location;
+if (getUrl = "https://dev.exploreyourweekend.com/") {
+    alert("You are viewing the DEV version of this page. Please navigate to https://exploreyourweekend.com/ for the published version.")
+}
+
 
 function writeHTML() {
 
