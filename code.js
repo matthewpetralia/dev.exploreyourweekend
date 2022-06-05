@@ -8,22 +8,21 @@ document.getElementsByTagName("head")[0].innerHTML += `
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 `;
     
-document.getElementsByTagName("title")[0].innerHTML += " | Explore your Weekend";
+//var getDevUrl = window.location;
+//if (getDevUrl = "https://dev.exploreyourweekend.com/") {
+//    alert("You are viewing the DEV version of this page. Please navigate to https://exploreyourweekend.com/ for the published version.")
+//}
+//            <span class="material-icons-outlined" id="expand">expand_less</span>
 
-var getUrl = window.location;
-if (getUrl = "https://dev.exploreyourweekend.com/") {
-    alert("You are viewing the DEV version of this page. Please navigate to https://exploreyourweekend.com/ for the published version.")
-}
-
-
-function writeHTML() {
+function formContent() {
 
     let main = document.querySelector(".Main");
 
     let createNav = `
         <div class="Nav">
-        <a href="javascript:void(0);" onclick="myFunction()">
+        <a title="Menu" href="javascript:void(0);" onclick="myFunction()">
             <span class="material-icons-outlined" id="expand">expand_less</span>
+            <h1>Explore your Weekend</h1>
         </a>
         <div id="myLinks">
             <div class="InfoPanel">
@@ -39,14 +38,14 @@ function writeHTML() {
     for (e = 0; e < main.children.length; e++) {
 
 
-        const A1 = main.children[e].innerHTML.split(";");
+        let h2 = document.getElementsByTagName("h2");
+        let h3 = document.getElementsByTagName("h3");
+        
+        let addImage ='<picture><source srcset="m-' + (h2[e].innerHTML.replace(/\s+/g, '_'))+'('+(h3[e].innerHTML.replace(/\s+/g, '_'))+')' + '.webp" media="(orientation: portrait)"><img src="' +  (h2[e].innerHTML.replace(/\s+/g, '_'))+'('+(h3[e].innerHTML.replace(/\s+/g, '_'))+')' + '.webp" onerror="this.onerror=null;this.src=' + "'" + '../Images/Springbrook_National_Park.webp' + "'" + ';" alt="' + h2[e].innerHTML + ', ' + h3[e].innerHTML + ' - Explore your Weekend"></picture>';
 
-        main.children[e].innerHTML =
-            '<picture><source srcset="../Images/m/m-' + A1[0] + '.webp" media="(orientation: portrait)"><img src="../Images/' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + '../Images/m/m-Sp_.webp' + "'" + ';" alt="' + A1[1] + ', ' + A1[4] + ' - Explore your Weekend"></picture>' +
-            '<a class="bwd"></a><a class="fwd"></a><div class="InfoPanel"><h3>' + A1[4] + '</h3><h2>' + A1[1] + '</h2><div class="tagContent">' + A1[2] + '</div><p>' + A1[3] + '</p></div>';
+        document.getElementsByClassName("InfoPanel")[e].insertAdjacentHTML('beforebegin', addImage);
 
-
-        text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + "</a>";
+        text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + main.children[e].id + "' onclick='myFunction()'>" + h2[e].innerHTML + "</a>";
 
 
     }
@@ -82,12 +81,14 @@ function writeHTML() {
 
 function writeIndex() {
 
+
     let main = document.querySelector(".Landing");
 
     let createNav = `
         <div class="Nav">
-        <a href="javascript:void(0);" onclick="myFunction()">
+        <a title="Menu" href="javascript:void(0);" onclick="myFunction()">
             <span class="material-icons-outlined" id="expand">expand_less</span>
+            <h1>Explore your Weekend</h1>
         </a>
         <div id="myLinks">
             <div class="InfoPanel">
@@ -103,14 +104,14 @@ function writeIndex() {
     for (e = 0; e < main.children.length; e++) {
 
 
-        const A1 = main.children[e].innerHTML.split(";");
+        let h2 = document.getElementsByTagName("h2");
+        let h3 = document.getElementsByTagName("h3");
+        
+        let addImage ='<picture><source srcset="Images/m-' + (h2[e].innerHTML.replace(/\s+/g, '_'))+'_'+(h3[e].innerHTML.replace(/\s+/g, '_'))+ '.webp" media="(orientation: portrait)"><img src="Images/' +  (h2[e].innerHTML.replace(/\s+/g, '_'))+'_'+(h3[e].innerHTML.replace(/\s+/g, '_')) + '.webp" onerror="this.onerror=null;this.src=' + "'" + 'Images/m/m-Sp_.webp' + "'" + ';" alt="' + h2[e].innerHTML + ', ' + h3[e].innerHTML + ' - Explore your Weekend"></picture>';
 
-        main.children[e].innerHTML =
-            '<picture><source srcset="Images/m/m-' + A1[0] + '.webp" media="(orientation: portrait)"><img src="Images/' + A1[0] + '.webp" onerror="this.onerror=null;this.src=' + "'" + 'Images/m/m-Sp_.webp' + "'" + ';" alt="' + A1[1] + ' ' + A1[2] + ' - Explore your Weekend"></picture>' +
-            '<a class="fwd" href="' + (A1[1].replace(/\s+/g, '')) + (A1[2].replace(/\s+/g, '')) + '"></a><div class="InfoPanel"><h2>' + A1[1] + '</h2><h3>' + A1[2] + '</h3><div class="tagContent">' + A1[3] + '</div></div>';
+        document.getElementsByClassName("InfoPanel")[e].insertAdjacentHTML('beforebegin', addImage);
 
-
-        text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + (A1[1].replace(/\s+/g, '')) + (A1[2].replace(/\s+/g, '')) + "' onclick='myFunction()'>" + A1[1] + " " + A1[2] + "</a>";
+        text += document.querySelector("#myLinks .tags").innerHTML = "<a href='#" + main.children[e].id + "' onclick='myFunction()'>" + h2[e].innerHTML +" "+h3[e].innerHTML + "</a>";
 
 
     }
@@ -120,7 +121,10 @@ function writeIndex() {
     document.getElementsByTagName("head")[0].innerHTML +=
         '<link href="https://use.typekit.net/ade3twf.css" rel="stylesheet">'
 
-
+    var getUrl = window.location;
+    if (getUrl = "https://exploreyourweekend.com/") {
+        document.getElementsByTagName("body").className += " Dev";
+    }
 
 
     for (let j = 0; j < (document.querySelectorAll(".Landing > div")).length; j++) {
