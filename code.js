@@ -41,7 +41,8 @@ function formContent() {
         let h2 = document.getElementsByTagName("h2");
         let h3 = document.getElementsByTagName("h3");
         
-        let addImage ='<picture><source srcset="m-' + (h2[e].innerHTML.replace(/\s+/g, '_'))+'('+(h3[e].innerHTML.replace(/\s+/g, '_'))+')' + '.webp" media="(orientation: portrait)"><img src="' +  (h2[e].innerHTML.replace(/\s+/g, '_'))+'('+(h3[e].innerHTML.replace(/\s+/g, '_'))+')' + '.webp" onerror="this.onerror=null;this.src=' + "'" + '../Images/Springbrook_National_Park.webp' + "'" + ';" alt="' + h2[e].innerHTML + ', ' + h3[e].innerHTML + ' - Explore your Weekend"></picture>';
+        let addImage ='<picture><source srcset="m-' + (h2[e].innerHTML.replace(/\s+/g, '_'))+'('+(h3[e].innerHTML.replace(/\s+/g, '_'))+')' + '.webp" media="(orientation: portrait)"><img src="' +  (h2[e].innerHTML.replace(/\s+/g, '_'))+'('+(h3[e].innerHTML.replace(/\s+/g, '_'))+')' + '.webp" onerror="this.onerror=null;this.src=' + "'" + '../Images/Springbrook_National_Park.webp' + "'" + ';" alt="' + h2[e].innerHTML + ', ' + h3[e].innerHTML + ' - Explore your Weekend"></picture>'+
+        '<a class="bwd"></a><a class="fwd"></a>';
 
         document.getElementsByClassName("InfoPanel")[e].insertAdjacentHTML('beforebegin', addImage);
 
@@ -123,7 +124,7 @@ function writeIndex() {
 
     var getUrl = window.location;
     if (getUrl = "https://exploreyourweekend.com/") {
-        document.getElementsByTagName("body").className += " Dev";
+        document.getElementsByTagName("body")[0].className += " Dev";
     }
 
 
