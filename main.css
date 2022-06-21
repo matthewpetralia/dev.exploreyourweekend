@@ -148,6 +148,10 @@ h2 {
     margin-top: -1vh;
 }
 
+.ind p {
+    padding: 0 3vw;
+}
+
 p {
 /*    font-family: 'Lato Thin', sans-serif;*/
 /*    font-family: 'Futura PT Thin', sans-serif;*/
@@ -360,7 +364,7 @@ h2 {
 
 .tags a {
     background-color: var(--Green);
-    padding: 1vh 3vw;
+    padding: 1vh 5vw;
     margin-right: 1vw;
     margin-bottom: .5vh;
     border-radius: 3vh;
