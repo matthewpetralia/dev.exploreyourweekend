@@ -5,6 +5,7 @@ document.getElementsByTagName("head")[0].innerHTML += `
     <html lang = "en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" type="image/x-icon" href="/SVG/Explore%20your%20Weekend%20Logo.svg">
+    <meta property="og:image" content="/Images/m-Ultimate_Guide_.webp" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 `;
@@ -23,8 +24,12 @@ for (v = 0; v < document.getElementsByClassName("bwd").length; v++) {
     document.querySelectorAll(".bwd")[v].innerHTML = '<span class="material-symbols-outlined">chevron_left</span>';
 }
     
-for (v = 0; v < document.querySelectorAll(".tags a").length; v++) {
-    document.querySelectorAll(".tags a")[v].innerHTML += '<span class="material-symbols-outlined">chevron_right</span>';
+for (v = 0; v < document.querySelectorAll(".tags a:not(a[target='_blank'])").length; v++) {
+    document.querySelectorAll(".tags a:not(a[target='_blank'])")[v].innerHTML += '<span class="material-symbols-outlined">chevron_right</span>';
+}
+    
+for (v = 0; v < document.querySelectorAll("a[target='_blank']").length; v++) {
+    document.querySelectorAll("a[target='_blank']")[v].innerHTML += '<span class="material-symbols-outlined">arrow_outward</span>';
 }
 }
 
@@ -41,15 +46,15 @@ function createNav() {
                     <h1><a href="../"><img src="/EYW-Extended.svg" alt="Explore your Weekend"></a></h1>
                     <div>
                         <a href="/About">About</a>
-                        <a href="https://www.instagram.com/exploreyourweekend/?hl=en">Instagram</a>
+                        <a href="https://www.instagram.com/exploreyourweekend/?hl=en" target='_blank'>Instagram</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>`;
     document.querySelector(".Main, .Landing").insertAdjacentHTML('afterend', navContent);
-
 }
+
 
 function formContent() {
 
@@ -77,7 +82,7 @@ function formContent() {
 
 
     document.getElementsByTagName("head")[0].innerHTML +=
-        '<link href="https://use.typekit.net/ade3twf.css" rel="stylesheet">'
+        '<link href="https://use.typekit.net/ade3twf.css" rel="stylesheet">';
 
     arrows();
 
@@ -135,11 +140,6 @@ function writeIndex() {
 
     document.getElementsByTagName("head")[0].innerHTML +=
         '<link href="https://use.typekit.net/ade3twf.css" rel="stylesheet">'
-
-    var getUrl = window.location;
-    if (getUrl = "https://exploreyourweekend.com/") {
-        document.getElementsByTagName("body")[0].className += " Dev";
-    }
     
         arrows();
 

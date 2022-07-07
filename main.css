@@ -7,7 +7,7 @@
 a,
 body {
     color: white;
-/*    font-family: 'Lato Light', sans-serif;*/
+    /*    font-family: 'Lato Light', sans-serif;*/
     text-decoration: none;
 }
 
@@ -25,11 +25,6 @@ body {
     --Sand-Op: rgba(230, 224, 218, .8);
     --Sand: rgba(230, 224, 218, 1);
     --MainHeight: 100%;
-}
-
-.Dev > .Landing > div:nth-child(n+6),
-.Dev .Nav .tags a:nth-child(n+8) {
-    display: none;
 }
 
 .Main img,
@@ -153,12 +148,13 @@ h2 {
 }
 
 p {
-/*    font-family: 'Lato Thin', sans-serif;*/
-/*    font-family: 'Futura PT Thin', sans-serif;*/
+    /*    font-family: 'Lato Thin', sans-serif;*/
+    /*    font-family: 'Futura PT Thin', sans-serif;*/
     font-family: futura-pt, sans-serif;
-font-weight: 300;
-font-style: normal;
+    font-weight: 300;
+    font-style: normal;
     font-size: 2.3vh;
+    margin: 2vh 0;
 }
 
 h1 {
@@ -184,23 +180,23 @@ h2 {
 }
 
 #myLinks img {
-/*    position: relative;*/
+    /*    position: relative;*/
     display: block;
     height: 24vh;
-/*    width: auto;*/
+    /*    width: auto;*/
     min-height: 100%;
     min-width: 100%;
     max-height: 100%;
     max-width: 100%;
-/*
+    /*
     margin-left: auto;
     margin-right: auto;
 */
-/*        border-radius: 0 0 3vh 3vh;*/
+    /*        border-radius: 0 0 3vh 3vh;*/
     margin-bottom: 1vh;
     object-fit: cover;
-/*    object-position: center;*/
-/*    overflow: hidden;*/
+    /*    object-position: center;*/
+    /*    overflow: hidden;*/
     /*    margin-right: .4em;*/
 }
 
@@ -285,11 +281,25 @@ h2 {
 
 #PageNotFound .tags a {
     width: 100%;
+    line-height: 3em;
 }
 
-.Nav .InfoPanel .tags a:first-child {
+/*
+--Add as JS???
+#PageNotFound .tags a img {
+    object-fit: cover;
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+*/
+
+.Nav .InfoPanel .tags h1 a:first-child {
     text-align: center;
     background-color: transparent;
+    border: none;
 }
 
 .Nav .InfoPanel .tags > a {
@@ -305,27 +315,17 @@ h2 {
 .Nav .InfoPanel .tags div {
     background: transparent;
     padding: 0;
-    margin: 0;
+    margin: 0 0 1vh 0;
 }
 
 .Nav .InfoPanel .tags div > a {
     text-align: center;
-    color: var(--Green);
-    background-color: transparent;
-    border-color: var(--Green);
-    border-style: solid;
-    border-width: .2vh;
     font-weight: 500;
-    /*    font-family: 'Lato Regular';*/
 }
 
-.Nav .InfoPanel .tags div > a:hover {
-    color: white;
-    background-color: var(--Green);
-}
 
 .Nav .InfoPanel h1:hover {
-    background: var(--Sand-Op);
+    background: var(--Sand);
 }
 
 .Nav .InfoPanel h1 {
@@ -362,19 +362,31 @@ h2 {
     /*    border-width: .25vh;*/
 }
 
-.tags a {
+.tags a,
+.Main p + a:not(#About-Page .Main p + a) {
     background-color: var(--Green);
     padding: 1vh 5vw;
     margin-right: 1vw;
     margin-bottom: .5vh;
     border-radius: 3vh;
-    vertical-align: middle;
+    /*    vertical-align: middle;*/
+    /*    line-height: 120%;*/
+    border: solid;
+    border-color: var(--Green);
+    border-width: .1vh;
 
     font-size: 2.2vh;
     font-family: 'futura-pt', sans-serif;
     font-weight: 300;
 
 }
+
+.Main p + a:not(#About-Page .Main p + a) {
+    margin: 5vh 0;
+    padding: 0.4vh 4vw;
+    box-sizing: border-box;
+}
+
 
 .tags a:last-child {
     margin-right: 0;
@@ -384,8 +396,12 @@ h2 {
     width: 50%;
 }
 
-.tags a:hover {
+.tags a:hover,
+.Main p + a:not(#About-Page .Main p + a):hover {
     background-color: var(--Sand);
+    color: var(--Green);
+    border-color: transparent;
+
 }
 
 .InfoPanel {
@@ -393,11 +409,11 @@ h2 {
     padding: 2.5%;
     box-sizing: border-box;
     bottom: 0;
-    background-color: rgba(230, 224, 218, .8);
+    background-color: rgba(230, 224, 218, .9);
     height: auto;
     width: 100%;
     border-radius: 3vh 3vh 0 0;
-    padding-bottom: 6vh;
+    padding-bottom: 8vh;
     overflow: hidden;
 }
 
@@ -429,6 +445,10 @@ h2 {
 .tags {
     display: flex;
     flex-wrap: wrap;
+}
+
+.Main .InfoPanel .tags {
+    margin: -0.75vh 0;
 }
 
 .tags div {
