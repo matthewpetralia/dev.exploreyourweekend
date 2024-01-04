@@ -4,7 +4,7 @@
 document.getElementsByTagName("head")[0].innerHTML += `
     <html lang = "en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="icon" type="image/x-icon" href="/SVG/Explore%20your%20Weekend%20Logo.svg">
+    <link rel="icon" type="image/x-icon" href="/ExploreYourWeekendLogoGREEN.svg">
     <meta property="og:image" content="/Images/m-Ultimate_Guide_.webp" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -37,13 +37,14 @@ function createNav() {
     let navContent = `
         <div class="Nav">
         <a title="Menu" href="javascript:void(0);" onclick="myFunction()">
+            <h1><img src="/ExploreYourWeekendLogo.svg" alt="Explore your Weekend"></h1>
             <span class="material-icons-outlined" id="expand">expand_less</span>
-            <h1>Explore your Weekend</h1>
+            
         </a>
         <div id="myLinks">
             <div class="InfoPanel">
                 <div class="tags">
-                    <h1><a href="../"><img src="/EYW-Extended.svg" alt="Explore your Weekend"></a></h1>
+                    <h1><a href="../"><img src="/ExploreYourWeekendLogoGREEN.svg" alt="Explore your Weekend"></a></h1>
                     <div>
                         <a href="/About">About</a>
                         <a href="https://www.instagram.com/exploreyourweekend/?hl=en" target='_blank'>Instagram</a>
@@ -60,7 +61,7 @@ function formContent() {
 
     let main = document.querySelector(".Main");
 
-    createNav()
+    createNav();
 
     let text = " ";
 
@@ -74,8 +75,8 @@ function formContent() {
             '<a class="bwd"></a><a class="fwd"></a>';
 
         document.getElementsByClassName("InfoPanel")[e].insertAdjacentHTML('beforebegin', addImage);
-
-        let navLinks = "<a href='#" + main.children[e].id + "' onclick='myFunction()'>" + h2[e].innerHTML + "</a>";
+        
+        let navLinks = "<a href='#" + main.children[e].id + "' onclick='myFunction()'>" + h2[e].innerHTML + " " + h3[e].innerHTML + "</a>";
         document.querySelector("#myLinks .tags").insertAdjacentHTML('beforeend', navLinks);
 
     }
